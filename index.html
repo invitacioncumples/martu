@@ -1,1 +1,253 @@
-Prueba
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>¡Martu 15 Años! 🌸 21.03.2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #f9e1e8 0%, #fff0f5 50%, #e0f7fa 100%);
+      color: #4a4a4a;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px;
+    }
+    .container {
+      background: white;
+      border-radius: 28px;
+      overflow: hidden;
+      width: 100%;
+      max-width: 900px;          /* ← límite razonable para pantallas grandes */
+      box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+      text-align: center;
+      margin: 0 auto;
+    }
+    .header-image {
+      width: 100%;
+      height: 450px;             /* un poco más alto para aprovechar el ancho */
+      object-fit: cover;
+      display: block;
+    }
+    .content {
+      padding: 50px 25px 70px;   /* más espacio lateral en pantallas anchas */
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 6rem;           /* más grande en pantallas anchas */
+      margin: 10px 0 5px;
+      line-height: 0.9;
+    }
+    .subtitle {
+      font-size: 1.8rem;
+      color: #555;
+      margin-bottom: 10px;
+      font-weight: 300;
+    }
+    .age {
+      font-size: 3.5rem;
+      font-weight: 600;
+      color: #ec4899;
+      margin: 20px 0 40px;
+    }
+    .invitation-text {
+      font-size: 1.35rem;
+      line-height: 1.7;
+      color: #444;
+      margin: 25px 0 50px;
+      font-style: italic;
+      padding: 0 15px;
+    }
+    /* Countdown style */
+    .countdown-section {
+      background: #000;
+      color: #fff;
+      padding: 35px 25px;
+      margin: 40px 0;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    }
+    .countdown-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+    }
+    .timer {
+      font-size: 4rem;           /* más grande para pantallas anchas */
+      font-weight: 700;
+      letter-spacing: 8px;
+      line-height: 1.1;
+      margin: 15px 0 30px;
+      white-space: nowrap;
+    }
+    .labels {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      opacity: 0.9;
+    }
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin: 50px 0 40px;
+    }
+    .btn {
+	  display: block;
+      background: #000000;           /* Fondo negro */
+      color: #ffffff;                /* Texto blanco */
+      padding: 18px 50px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 1.25rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+      max-width: 400px;
+      margin: 0 auto;
+      border: 1px solid #333;        /* borde sutil para definición */
+    }
+    .btn:hover {
+      background: #db2777;
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(236,72,153,0.45);
+    }
+    .footer {
+      font-size: 1.1rem;
+      color: #777;
+      margin-top: 30px;
+      padding-bottom: 30px;
+    }
+	.footername {
+	  
+	  font-family: 'Great Vibes', cursive;
+    }
+
+    /* Responsive: en móviles achicamos un poco */
+    @media (max-width: 600px) {
+      h1 { font-size: 5rem; }
+      .age { font-size: 3rem; }
+      .timer { font-size: 3rem; letter-spacing: 6px; }
+      .labels { gap: 30px; font-size: 0.95rem; }
+      .content { padding: 40px 20px 60px; }
+      .btn { padding: 16px 40px; font-size: 1.15rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <img 
+      src="https://invitacioncumples.github.io/martu/flores_new.png" 
+      alt="Flores decorativas" 
+      class="header-image"
+    />
+
+    <div class="content">
+
+      <div class="subtitle">
+        Mis 15 son el comienzo de nuevos sueños.<br>
+        Te espero para celebrarlos juntos.
+      </div>
+
+      <div class="countdown-section">
+        <div class="countdown-title">¿Cuánto falta?</div>
+        <div id="timer" class="timer">00 : 00 : 00 : 00</div>
+        <div class="labels">
+          <span>DÍAS</span>
+          <span>HORAS</span>
+          <span>MINUTOS</span>
+          <span>SEGUNDOS</span>
+        </div>
+      </div>
+		
+	  <!--<div class="invitation-text">
+		Club House Punta Ballena<br>
+		21:00hs
+	  </div>-->
+
+      <div class="buttons">
+	  	<div class="subtitle">Club House Punta Ballena<br>
+		21:00hs
+		</div>
+        <a href="https://maps.app.goo.gl/jMhboVGtZqrR997B8?g_st=iw" target="_blank" class="btn">
+          📍 Ubicación
+        </a>
+		<div class="subtitle">
+		<h3>Confirmar Asistencia</h3>
+		Confirmar asistencia antes del 10 de Marzo
+		</div>
+        <a href="https://forms.gle/ewPJ46XsMWrT6ffd7" target="_blank" class="btn">
+          🎉 Confirmar
+        </a>
+      </div>
+	  
+	  <div class="subtitle">
+        <h3>Vestimenta</h3>
+        Formal<br><br>
+		<h3>Lista de Regalos</h3>
+		Si querés acompañar este día con un regalo, podés hacerlo por transferencia.
+      </div>
+
+	  <div class="countdown-section">
+		<h2>Caja ahorro $ Brou</h2>
+		<h2>Nº: 110922499-00001</h2>
+		<h2>Titular: Martina De Leon</h2>
+	  </div>
+
+
+      <div class="footer">
+        ¡Te espero con todo el amor! 💕<br>
+        No faltes, va a ser mágico ✨
+      </div>
+	  
+	  <div class="footername">
+		<h1>Martu</h1>
+	  </div>
+	  
+    </div>
+  </div>
+
+  <script>
+    const fechaFiesta = new Date("2026-03-21T21:00:00-03:00").getTime();
+
+    function updateTimer() {
+      const now = new Date().getTime();
+      let distance = fechaFiesta - now;
+
+      if (distance < 0) {
+        document.getElementById("timer").innerHTML = "¡00 : 00 : 00 : 00!";
+        return;
+      }
+
+      const days    = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours   = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("timer").innerHTML = 
+        `${days.toString().padStart(2,'0')} : ` +
+        `${hours.toString().padStart(2,'0')} : ` +
+        `${minutes.toString().padStart(2,'0')} : ` +
+        `${seconds.toString().padStart(2,'0')}`;
+    }
+
+    updateTimer();
+    setInterval(updateTimer, 1000);
+  </script>
+
+</body>
+</html>
