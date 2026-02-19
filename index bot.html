@@ -33,13 +33,9 @@
       padding: 1.5rem 0;
     }
 
-    h1, h3 {
+    h1, h2, h3 {
       font-family: 'Great Vibes', cursive;
-      color: #FFFFFF;
-    }
-	
-	h2{
-      color: #000000;
+      color: var(--rosa-fuerte);
     }
 
     .hero {
@@ -48,13 +44,15 @@
     }
 
     .titulo-principal {
-      font-size: 10rem;
+      font-size: 3.8rem;
+      line-height: 1.1;
+      margin-bottom: 1rem;
     }
 
     .subtitulo {
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       font-weight: 500;
-      color: #FFFFFF;
+      color: #555;
       margin-bottom: 0.5rem;
     }
 
@@ -72,12 +70,12 @@
       font-size: 3rem;
       font-weight: 600;
       letter-spacing: 5px;
-      color: #000000;
+      color: var(--rosa-fuerte);
     }
 
     .countdown-labels {
       font-size: 0.95rem;
-      letter-spacing: 0.2px;
+      letter-spacing: 4px;
       margin-top: 0.5rem;
       color: #666;
     }
@@ -87,11 +85,10 @@
       padding: 2.5rem 1rem;
       max-width: 600px;
       margin: 0 auto;
-	  color: #666;
     }
 
     .btn-custom {
-      background: #000000;
+      background: var(--rosa-medio);
       color: white;
       font-weight: 600;
       padding: 0.75rem 2rem;
@@ -101,7 +98,7 @@
     }
 
     .btn-custom:hover {
-      background: #E4E4E4;
+      background: var(--rosa-fuerte);
       transform: translateY(-2px);
       box-shadow: 0 8px 20px rgba(236, 64, 122, 0.3);
     }
@@ -116,13 +113,13 @@
     }
 
     .heart {
-      color: #FF0000;
+      color: var(--rosa-fuerte);
       font-size: 1.8rem;
     }
 
-    @media (max-width: 590px) {
-      .titulo-principal { font-size: 4rem; }
-      .countdown       { font-size: 2rem; letter-spacing: 2.5px; }
+    @media (max-width: 576px) {
+      .titulo-principal { font-size: 3rem; }
+      .countdown       { font-size: 2.6rem; letter-spacing: 4px; }
     }
   </style>
 </head>
@@ -134,10 +131,10 @@
 	<div class="position-relative d-inline-block">
 	  <img src="https://invitacioncumples.github.io/martu/cabezal.jpeg" class="img-fluid" alt="Imagen Responsiva">
 	  
-	  <div class="position-absolute bottom-0 end-0 text-white p-2 rounded"> <!--bg-dark bg-opacity-50-->
+	  <div class="position-absolute bottom-0 end-0 text-white bg-dark bg-opacity-50 p-2 rounded">
 		<p class="subtitulo">21.03.2026</p>
 		<h1 class="titulo-principal">Martu</h1>    
-		<p class="subtitulo">Mis XV</p>    
+		<h1 class="subtitulo">Mis XV</h1>    
 	  </div>
 	  
 	</div>
@@ -205,9 +202,9 @@
 
   <!-- Cierre -->
   <section class="section pb-5">
-    <!--<p class="fs-3 fw-medium heart">¡Te espero con todo el amor! 💕</p>-->
+    <p class="fs-3 fw-medium heart">¡Te espero con todo el amor! 💕</p>
     <p class="fs-4">No faltes, va a ser mágico ✨</p>
-    <h1 class="mt-5 mb-4 titulo-principal h2">Martu</h1>
+    <h1 class="mt-5 mb-4">Martu</h1>
   </section>
 
   <!-- Bootstrap JS (para componentes que lo necesiten) -->
